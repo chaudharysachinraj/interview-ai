@@ -16,7 +16,8 @@ app.use(cors({
     "http://localhost:5173",
     "https://interview-ai0-rho.vercel.app",
     "https://interview-ai-pjzkncvkj-rajchaudhary3801-5887s-projects.vercel.app",
-    "https://interview-ai0-pjzkncvkj-rajchaudhary3801-5887s-projects.vercel.app/login"    
+    "https://interview-ai0-pjzkncvkj-rajchaudhary3801-5887s-projects.vercel.app/login",
+    "https://interview-ai0-pcgnvvsbf-rajchaudhary3801-5887s-projects.vercel.app/login" 
   ],
   credentials: true
 }))
