@@ -9,15 +9,15 @@ app.use(cookieParser())
 
 
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
-
 // app.use(cors({
-//   origin: "https://interview-ai-taupe.vercel.app", 
+//   origin: "http://localhost:5173",
 //   credentials: true
 // }));
+
+app.use(cors({
+  origin: "https://interview-ai-taupe.vercel.app", 
+  credentials: true
+}));
 
 
 /* require all the routes here */
