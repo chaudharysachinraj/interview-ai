@@ -19,7 +19,7 @@ app.use(cookieParser())
 // }));
 
 app.use(cors({
-  origin: "http://interview-ai-xyz.vercel.app/", 
+  origin: "https://interview-ai-taupe.vercel.app", 
   credentials: true
 }));
 
