@@ -40,8 +40,8 @@ async function registerUserController(req, res) {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
-      sameSite: "lax"
+      secure: true,
+      sameSite: "none"
     });
 
     res.status(201).json({
