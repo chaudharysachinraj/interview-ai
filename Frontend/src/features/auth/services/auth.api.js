@@ -9,6 +9,14 @@ const api = axios.create({
     baseURL: BASE_URL,
     withCredentials: true
 });
+// 🔥 interceptor
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 // ================= REGISTER =================
 export async function register({ username, email, password }) {

@@ -15,8 +15,10 @@ export const useAuth = () => {
     try {
         await login({ email, password })
 
-        const data = await getMe()   // 🔥 yahi add karna hai
-        setUser(data.user)
+       const data = await login({ email, password });
+
+localStorage.setItem("token", data.token); // 👈 ADD
+setUser(data.user);
 
     } catch (err) {
 
