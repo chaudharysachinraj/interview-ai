@@ -43,11 +43,22 @@ async function registerUserController(req, res) {
     )
 
     // res.cookie("token", token)
-    res.cookie("token", token, {
-    httpOnly: true,
-    secure: false,       
-    sameSite: "none"
-})
+//     res.cookie("token", token, {
+//     httpOnly: true,
+//     secure: false,       
+//     sameSite: "none"
+// })
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none"
+});
+
+// res.cookie("token", token, {
+//   httpOnly: true,
+//   sameSite: "lax",
+//   secure: false
+// });
 
 
     res.status(201).json({
@@ -93,11 +104,18 @@ async function loginUserController(req, res) {
         { expiresIn: "1d" }
     )
 
-    res.cookie("token", token, {
-    httpOnly: true,
-    secure: false,
-    sameSite: "none"
-})
+
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none"
+});
+// res.cookie("token", token, {
+//   httpOnly: true,
+//   sameSite: "lax",
+//   secure: false
+// });
+
     res.status(200).json({
         message: "User loggedIn successfully.",
         user: {

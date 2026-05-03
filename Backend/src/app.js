@@ -6,21 +6,22 @@ const app = express()
 
 app.use(express.json())
 app.use(cookieParser())
+
 // app.use(cors({
 //     origin: "https://interview-ai0-rho.vercel.app",
 //     credentials: true
 // }))
 
+
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   credentials: true
+// }));
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://interview-ai0-rho.vercel.app",
-    "https://interview-ai-pjzkncvkj-rajchaudhary3801-5887s-projects.vercel.app",
-    "https://interview-ai0-pjzkncvkj-rajchaudhary3801-5887s-projects.vercel.app/login",
-    "https://interview-ai0-pcgnvvsbf-rajchaudhary3801-5887s-projects.vercel.app/login" 
-  ],
+  origin: "http://interview-ai-xyz.vercel.app/", 
   credentials: true
-}))
+}));
 
 
 /* require all the routes here */
